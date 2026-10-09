@@ -1,0 +1,296 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #263238;
+    line-height: 1.7;
+}
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    border-bottom: 1px solid #e8edf2;
+    background: #ffffff;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #2457a7;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #2457a7;
+}
+
+nav .nav-btn {
+    background: #2457a7;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 5px;
+}
+
+nav .nav-btn:hover {
+    background: #194580;
+    color: white;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    padding: 75px 8%;
+    background: #f5f8fc;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.welcome {
+    color: #2457a7;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.25;
+    color: #1f2937;
+    margin-bottom: 22px;
+}
+
+.description {
+    max-width: 510px;
+    font-size: 16px;
+    color: #626d7b;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #2457a7;
+    padding: 12px 23px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.primary-btn:hover {
+    background: #194580;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #788493;
+}
+
+/* Hero Image */
+
+.hero-image {
+    flex: 1;
+    max-width: 480px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* About */
+
+.about {
+    padding: 65px 15%;
+    text-align: center;
+}
+
+.about h2,
+.features h2,
+.start-section h2 {
+    font-size: 29px;
+    margin-bottom: 18px;
+    color: #25364a;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: #657080;
+    font-size: 15px;
+}
+
+/* Features */
+
+.features {
+    padding: 60px 8%;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.feature-card {
+    padding: 28px 22px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-radius: 7px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #29394d;
+}
+
+.feature-card p {
+    color: #697586;
+    font-size: 14px;
+}
+
+/* Get Started */
+
+.start-section {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.start-section p {
+    color: #697586;
+    margin-bottom: 25px;
+}
+
+/* Footer */
+
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: #f3f6fa;
+    border-top: 1px solid #e6ebf1;
+    color: #475569;
+    font-size: 14px;
+}
+
+.footer-small {
+    margin-top: 5px;
+    color: #8490a0;
+    font-size: 12px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 45px 6%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .about {
+        padding: 45px 7%;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        padding: 45px 6%;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 19px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+}

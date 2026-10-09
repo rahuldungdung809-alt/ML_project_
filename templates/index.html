@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Student Performance</div>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+
+            <a href="{{ url_for('predict_datapoint') }}"
+               class="nav-btn">Predict Score</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <main>
+        <section class="hero">
+
+            <div class="hero-text">
+                <p class="welcome">WELCOME TO OUR PROJECT</p>
+
+                <h1>
+                    Student Exam<br>
+                    Performance Prediction
+                </h1>
+
+                <p class="description">
+                    Every student has the potential to succeed.
+                    This project uses machine learning to predict
+                    a student's mathematics score based on their
+                    academic performance and other details.
+                </p>
+
+                <a href="{{ url_for('predict_datapoint') }}"
+                   class="primary-btn">
+                    Predict Your Score
+                </a>
+
+                <p class="note">
+                    Simple, quick and easy to use.
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80"
+                    alt="Student studying at a desk">
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About This Project</h2>
+
+            <p>
+                Student Exam Performance Prediction is a machine learning
+                project that estimates mathematics exam scores using
+                information such as reading scores, writing scores,
+                and student background. It demonstrates how data can
+                be used to make predictions about academic performance.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <h2>What You Can Do</h2>
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Enter Student Details</h3>
+                    <p>
+                        Fill in the required information and academic scores
+                        using a simple form.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Machine Learning</h3>
+                    <p>
+                        A trained regression model uses the provided
+                        information to estimate the math score.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Get a Prediction</h3>
+                    <p>
+                        View the predicted mathematics score after
+                        submitting the form.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="start-section">
+            <h2>Ready to try it?</h2>
+
+            <p>
+                Enter the student details and see the model's prediction.
+            </p>
+
+            <a href="{{ url_for('predict_datapoint') }}"
+               class="primary-btn">
+                Get Started
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Student Exam Performance Prediction</p>
+        <p class="footer-small">
+            A Machine Learning Project | 2026
+        </p>
+    </footer>
+
+</body>
+</html>
