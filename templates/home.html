@@ -231,10 +231,8 @@
 
         </form>
 
-        {% if results is defined and results is not none %}
-            <div class="result">
-                Predicted Math Score: {{results}}
-            </div>
+        {% if results is not none and results is defined %}
+        <h3>Predicted Math Score: {{ results }}</h3>
         {% endif %}
 
     </div>
